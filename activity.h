@@ -1,8 +1,8 @@
 // =================================================================
 //
 // File: activity.h
-// Author:
-// Date:
+// Author: Ernesto Guillén Guerrero
+// Date: 26/08/2022
 //
 // =================================================================
 #ifndef ACTIVITY_H
@@ -17,7 +17,18 @@
 // @Complexity	??
 // =================================================================
 unsigned int sumaIterativa(unsigned int n) {
-	return 0;
+	int acum, suma=0;
+	if (n==0){
+		return 0;
+	}
+	else {
+		acum = 1;
+		while(acum <= n){
+			suma += acum;
+			acum ++;
+		}
+		return suma;
+	}
 }
 
 // =================================================================
@@ -29,7 +40,13 @@ unsigned int sumaIterativa(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaRecursiva(unsigned int n) {
-	return 0;
+	if (n==0){
+			return 0;
+		}
+		else {
+			n = n+sumaRecursiva(n-1);
+		}
+		return n;
 }
 
 // =================================================================
@@ -41,7 +58,14 @@ unsigned int sumaRecursiva(unsigned int n) {
 // @Complexity	??
 // =================================================================
 unsigned int sumaDirecta(unsigned int n) {
-	return 0;
+	if (n==0){
+		return 0;
+	}
+	else {
+		n = (n*(n+1)/2);
+		return n;
+	}
 }
+make
 
 #endif /* ACTIVITY_H */
