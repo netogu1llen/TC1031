@@ -66,6 +66,6 @@ unsigned int sumaDirecta(unsigned int n) {
 		return n;
 	}
 }
-make
+
 
 #endif /* ACTIVITY_H */
