@@ -1,8 +1,9 @@
 #ifndef NADADORES_H
 #define NADADORES_H
-using namespace std;
 
 #include <string>
+
+using namespace std;
 
 class Nadador {
 public:
@@ -11,7 +12,7 @@ public:
     string prueba;
     double tiempo;
 
-    //Constructor modificado para incluir el estilo
+    //Constructor
     Nadador(string _nombre, string _estilo, string _prueba, double _tiempo)
         : nombre(_nombre), estilo(_estilo), prueba(_prueba), tiempo(_tiempo) {}
 
@@ -20,4 +21,5 @@ public:
         return tiempo < other.tiempo;
     }
 };
+
 #endif
