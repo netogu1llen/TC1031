@@ -33,7 +33,7 @@ Ejecuta el siguiente comando en la terminal:
 El programa requiere la entrada de datos para cada nadador, que incluye:
 - Nombre
 - Estilo
-- Prueba
+- Pruebazz
 - Tiempo
 
 El usuario proporciona estos datos manualmente a través del menú interactivo.
