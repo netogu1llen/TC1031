@@ -45,14 +45,36 @@ El programa genera un archivo reporte_nadadores.txt, que contiene un listado de 
 
 #### SICT0301: Evalúa los componentes
 - Análisis de Complejidad Completo:
--Agregar Nadador: La operación push en la cola tiene una complejidad de O(1).
 
-	-Cargar Nadadores desde el Archivo: Leer y agregar cada nadador a la cola tiene una complejidad de O(n), donde n es el número de líneas en swimmers.txt.
+- Agregar Nadador: La operación push en la cola tiene una complejidad de O(1).
 
-  -Ordenamiento para el Reporte: La función `merge` (Merge Sort) tiene una complejidad de O(n log n) al ordenar los nadadores por tiempo.
--Escritura de Reporte: Guardar el reporte en el archivo tiene una complejidad de O(n), donde n es el número de nadadores en el vector.
+- Cargar Nadadores desde el Archivo: Leer y agregar cada nadador a la cola tiene una complejidad de O(n), donde n es el número de líneas en swimmers.txt.
+	- Uso de una Cola (FIFO) en lugar de otras estructuras de datos 
+
+	- Orden de llegada (FIFO):
+	La cola asegura que los nadadores sean procesados en el mismo orden en que fueron ingresados, siguiendo el principio First In, First Out (FIFO).
+
+	Este orden es esencial en situaciones donde se debe respetar la secuencia de ingreso, como en el registro y consulta de información.
+
+	- Simplicidad y rendimiento:
+	Las operaciones básicas de una cola, como agregar (O(1)) y eliminar (O(1)), son mayormente eficientes en comparación con estructuras más complejas como listas enlazadas o vectores, que pueden implicar costos adicionales. 
+	- Operaciones optimizadas:
+	La cola simplifica el manejo de datos secuenciales y evita la sobrecarga de operaciones más complicadas.
+
+- Ordenamiento para el Reporte: La función `merge` (Merge Sort) tiene una complejidad de O(n log n) al ordenar los nadadores por tiempo.
+	- Uso de Merge Sort en lugar de otros algoritmos de ordenamiento
+	Eficiencia en el ordenamiento:
+
+	Merge Sort tiene una complejidad temporal de O(n log⁡ n) , lo que lo hace ideal para manejar grandes volúmenes de datos, como una lista extensa de nadadores.
+
+	Algoritmos como Bubble Sort (O(n^2)) y Selection Sort (O(n^2)) son más simples pero menos eficientes para conjuntos de datos grandes, ya que requieren muchas comparaciones y cambios.
+	- División y conquista:
+	El enfoque recursivo de Merge Sort divide el problema en partes más pequeñas,los ordena y combina eficientemente, lo que lo hace eficiente y adecuado para aplicaciones repetitivas como esta.
+
+- Escritura de Reporte: Guardar el reporte en el archivo tiene una complejidad de O(n), donde n es el número de nadadores en el vector.
 
 - Complejidad Total del Programa: La complejidad general del programa en la generación de un reporte es O(n log n) debido a la operación de ordenamiento.
+
 	
 #### SICT0302: Toma decisiones
 
