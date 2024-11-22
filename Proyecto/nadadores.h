@@ -95,22 +95,47 @@ void agregarNadador(queue<Nadador>& nadadores) {
     }
 }
 
-//Función para procesar y generar un reporte
-void procesarNadadores(queue<Nadador>& nadadores, const string& nombreArchivo) {
-    vector<Nadador> nadadoresVector; //Vector para almacenar los nadadores
+// Implementación del Merge Sort
+void merge(vector<Nadador>& arr, int left, int right) {
+    if (left >= right) return; // Caso base
+    int mid = left + (right - left) / 2;  // Encuentra el punto medio
+    merge(arr, left, mid);   // Ordena la primera mitad
+    merge(arr, mid + 1, right);  // Ordena la segunda mitad
 
-    //Copiar nadadores de la cola al vector
+    // Combina las dos mitades
+    vector<Nadador> temp(right - left + 1);
+    int i = left, j = mid + 1, k = 0;
+    while (i <= mid && j <= right) {
+        if (arr[i].tiempo < arr[j].tiempo) {
+            temp[k++] = arr[i++];
+        } else {
+            temp[k++] = arr[j++];
+        }
+    }
+    // Copia los elementos restantes
+    while (i <= mid) temp[k++] = arr[i++];
+    while (j <= right) temp[k++] = arr[j++];
+    
+    // Copia la parte ordenada de vuelta al arreglo original
+    for (i = left; i <= right; ++i) {
+        arr[i] = temp[i - left];
+    }
+}
+
+// Modificación de la función procesarNadadores para usar Merge Sort
+void procesarNadadores(queue<Nadador>& nadadores, const string& nombreArchivo) {
+    vector<Nadador> nadadoresVector; // Vector para almacenar los nadadores
+
+    // Copiar nadadores de la cola al vector
     while (!nadadores.empty()) {
         nadadoresVector.push_back(nadadores.front());
         nadadores.pop();
     }
 
-    //Ordenar los nadadores por tiempo
-    sort(nadadoresVector.begin(), nadadoresVector.end(), [](const Nadador& a, const Nadador& b) {
-        return a.tiempo < b.tiempo; //Comparar por tiempo
-    });
+    // Ordenar los nadadores por tiempo usando Merge Sort
+    merge(nadadoresVector, 0, nadadoresVector.size() - 1);
 
-    //Generar el reporte
+    // Generar el reporte
     ofstream archivo(nombreArchivo);
     if (!archivo.is_open()) {
         cerr << "Error al abrir el archivo para escribir el reporte." << endl;
@@ -119,7 +144,7 @@ void procesarNadadores(queue<Nadador>& nadadores, const string& nombreArchivo) {
 
     archivo << "Reporte de Nadadores (ordenados por tiempo):\n";
     for (const auto& nadador : nadadoresVector) {
-        archivo << nadador << endl; //Usar la sobrecarga de "<<"
+        archivo << nadador << endl; // Usar la sobrecarga de "<<"
     }
 
     archivo.close();
