@@ -44,7 +44,7 @@ El programa genera un archivo reporte_nadadores.txt, que contiene un listado de 
 # Desarrollo de competencias
 
 #### SICT0301: Evalúa los componentes
-- Análisis de Complejidad Completo:
+- Análisis de Complejidad:
 
 - Agregar Nadador: La operación push en la cola tiene una complejidad de O(1).
 
@@ -52,9 +52,7 @@ El programa genera un archivo reporte_nadadores.txt, que contiene un listado de 
 	- Uso de una Cola (FIFO) en lugar de otras estructuras de datos 
 
 	- Orden de llegada (FIFO):
-	La cola asegura que los nadadores sean procesados en el mismo orden en que fueron ingresados, siguiendo el principio First In, First Out (FIFO).
-
-	Este orden es esencial en situaciones donde se debe respetar la secuencia de ingreso, como en el registro y consulta de información.
+	La cola asegura que los nadadores sean procesados en el mismo orden en que fueron ingresados, siguiendo el principio First In, First Out (FIFO).Este orden es esencial en situaciones donde se debe respetar la secuencia de ingreso, como en el registro y consulta de información.
 
 	- Simplicidad y rendimiento:
 	Las operaciones básicas de una cola, como agregar (O(1)) y eliminar (O(1)), son mayormente eficientes en comparación con estructuras más complejas como listas enlazadas o vectores, que pueden implicar costos adicionales. 
@@ -73,7 +71,10 @@ El programa genera un archivo reporte_nadadores.txt, que contiene un listado de 
 
 - Escritura de Reporte: Guardar el reporte en el archivo tiene una complejidad de O(n), donde n es el número de nadadores en el vector.
 
-- Complejidad Total del Programa: La complejidad general del programa en la generación de un reporte es O(n log n) debido a la operación de ordenamiento.
+- Complejidad Total del Programa: 
+	- Mejor caso: O(n) cuando la lista ya está ordenada. 
+	- Peor caso: O(n log n) merge sort en cualquier circunstancia.  
+	- Caso promedio: O(n log n)
 
 	
 #### SICT0302: Toma decisiones
