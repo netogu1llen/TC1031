@@ -27,6 +27,7 @@ Nombre: David Ruiz, Estilo: mariposa, Prueba: 50, Tiempo: 45.46 segundos
 Nombre: Maria Gonzalez, Estilo: crol, Prueba: 50, Tiempo: 47 segundos
 Nombre: Ernesto, Estilo: Mariposa, Prueba: 100, Tiempo: 59.45 segundos
 Nombre: Raquel Flores, Estilo: mariposa, Prueba: 100, Tiempo: 64.79 segundos
+Nombre: Lalo, Estilo: pecho, Prueba: 100, Tiempo: 65.7 segundos
 Nombre: Daniel Romero, Estilo: pecho, Prueba: 100, Tiempo: 67.49 segundos
 Nombre: Luis Flores, Estilo: mariposa, Prueba: 100, Tiempo: 68.11 segundos
 Nombre: Miguel Martinez, Estilo: pecho, Prueba: 100, Tiempo: 71.23 segundos

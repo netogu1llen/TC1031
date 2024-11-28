@@ -1,0 +1,12 @@
+Problema 1
+
+Pancake Sorting
+
+Submission: 
+
+https://leetcode.com/problems/pancake-sorting/submissions/1444199860/
+
+Video:
+
+https://youtu.be/C3N_OfZsZtA
+

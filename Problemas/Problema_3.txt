@@ -1,0 +1,12 @@
+Problema 3
+
+Validate Binary Search Tree
+
+Submission: 
+
+https://leetcode.com/problems/validate-binary-search-tree/submissions/1464731406/
+
+Video:
+
+https://youtu.be/6VXszyUZwUI
+ 
